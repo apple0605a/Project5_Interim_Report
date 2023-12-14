@@ -4,12 +4,12 @@
 <html>
 <head>
     <title>Title</title>
-    <link rel="stylesheet" href="${path}/resources/css/style.css">
+    <link rel="stylesheet" href="${path}/css/style.css">
 </head>
 <body>
 <h1>자유게시판</h1>
 <table id="list" width="90%">
-    <th>
+    <tr>
     <th>Id</th>
     <th>Category</th>
     <th>Title</th>
@@ -18,7 +18,7 @@
     <th>Regdate</th>
     <th>Edit</th>
     <th>Delete</th>
-    </th>
+    </tr>
 
     <c:forEach items="${list}" var="u">
         <tr>
@@ -29,7 +29,7 @@
             <td>${u.content}</td>
             <td>${u.regdate}</td>
             <td><a href="editform/${u.seq}">Edit</a></td>
-            <td><a href="javascript:delete_ok('${u.seq}')">Delete</a> </td>
+            <td><a href="deleteok/${u.seq}">Delete</a> </td>
         </tr>
     </c:forEach>
 </table>

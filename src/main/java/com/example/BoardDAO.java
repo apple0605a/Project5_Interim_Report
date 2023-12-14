@@ -30,10 +30,10 @@ import org.springframework.jdbc.core.RowMapper;
 
 		public int insertBoard(BoardVO vo) {
 			String sql = "insert into BOARD (title, writer, content, category) values ("
-					+ "" + vo.getTitle() + "',"
-					+ "" + vo.getWriter() + "',"
-					+ "" + vo.getContent() + "',"
-					+ "" + vo.getCategory() + "')";
+					+ "'" + vo.getTitle() + "',"
+					+ "'" + vo.getWriter() + "',"
+					+ "'" + vo.getContent() + "',"
+					+ "'" + vo.getCategory() + "')";
 			return jdbcTemplate.update(sql);
 		}
 
